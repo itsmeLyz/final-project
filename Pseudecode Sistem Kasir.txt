@@ -1,0 +1,84 @@
+LIZA JULIA - FE5126133
+
+START
+while (status = true){
+writeln("Silakan Masukkan Kode Barang : ");
+read(kodebarang);
+while(status=true)
+writeln("Silakan Masukkan Jumlah Barang : ");
+read(jumlahbarang);
+if (jumlahbarang<0)
+write("Kesalahan Input Jumlah Barang");
+write("Coba Lagi");
+status=true; end if
+else status=false;break;
+if (kodebarang 201301) then
+write("Nama Barang = Chimory");
+hargabarang=6500 ;
+totalharga1 =(double)(hargabarang*jumlahbarang);
+write("Total Harga : "+totalharga1);
+status = true ; end if
+else if(kodebarang 201302) then
+write("Nama Barang = Pocky ");
+hargabarang=7000 ;
+totalharga2 =(double)(hargabarang*jumlahbarang);
+write("Total Harga : "+totalharga2);
+status = true ; end if
+else if(kodebarang 201303) then
+Write("Nama Barang = Silverqueen ");
+hargabarang=11000 ;
+totalharga3 =(double)(hargabarang*jumlahbarang);
+Write("Total Harga : "+totalharga3);
+status = true ; end if
+else
+Write(" Kesalahan Input Data ");
+status = false; break; end if
+jumlahseluruhnya = totalharga1 + totalharga2 + totalharga3+totalharga4+totalharga5;
+Write("Jumlah Belanja Anda Seluruhnya Adalah "+jumlahseluruhnya );
+if (jumlahseluruhnya >= 100000)then
+Write("Anda Mendapatkan Diskon 10 %");
+hargadiskon=jumlahseluruhnya-(jumlahseluruhnya*0.1);
+Write("Jumlah Belanja Anda Setelah Diskon Adalah "+hargadiskon);
+Writeln(" Uang Yang Di Bayar =");
+read(Pembayaran);
+uangkembalian = pembayaran - hargadiskon;
+Writeln("Kembalian = Rp "+uangkembalian);
+end if
+else
+Writeln(" Uang Yang Di Bayar =");
+Read(Pembayaran);
+if (pembayaran <hargadiskon)then
+write("Kesalahan Input Pembayaran / Uang Tidak Mencukupi Pembelanjaan");
+write("Coba Lagi");
+status = true ;end if
+else if(pembayaran>=hargadiskon)then
+status=false; break;end if
+uangkembalian=pembayaran - hargadiskon ;
+write("Kembalian = Rp "+uangkembalian);
+else
+while(status=true)
+writeln(" Uang Yang Di Bayar =");
+read(pembayaran);
+if(pembayaran<jumlahseluruhnya)then
+write("Kesalahan Input Pembayaran / Uang Tidak Mencukupi Pembelanjaan");
+write("Coba Lagi");
+status = true ;
+else
+status=false;break;
+uangkembalian = pembayaran - jumlahseluruhnya;
+write("Kembalian = Rp "+uangkembalian+ " ");
+end if
+write(" Apakah Anda Ingin Melakukan Transaksi Baru ? ");
+write(" Tekan 1 Jika Anda Ingin Melakukan Transaksi Lagi");
+write(" Tekan 2 Jika Anda Tidak Melakukan Transaksi ");
+read(jawaban) =;
+
+
+if (jawaban == 1)then
+ulang = true ;
+end if
+else if(jawaban==2)
+System.out.print("Terima Kasih Atas Kunjungan Anda");
+break;
+end if
+end
